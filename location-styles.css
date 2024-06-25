@@ -1,0 +1,445 @@
+/*
+==================================
+CSS reset
+==================================
+*/
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+  }
+
+/*
+==================================
+BODY styles
+==================================
+*/
+
+html {
+    /*1 em or rem unit is default HTML 16px font size. Trick to make px to rem calculations easier, just divide pixels by 10*/
+    font-size: 62.5%;
+}
+body {
+    background-color: hsl(0, 0%, 100%);
+}
+
+/*
+==================================
+MOBILE styles
+==================================
+*/
+
+/*MOBILE MAP section*/
+.map-section {
+    /*background-image: url('../assets/mobile/image-map@2x.png');
+    background-position: center;
+    background-size: cover;*/
+    width: 100%;
+    height: 146.67vw;
+}
+
+#map {
+    width: 100%;
+    height: 100%;
+}
+
+.button-link {
+    display: block;
+    position: absolute;
+    z-index: 999;
+    text-decoration: none;
+    width: 70.4vw;
+    height: 19.2vw;
+}
+
+.button {
+    grid-area: button;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 100%;
+}
+
+.button button {
+    width: 55.47vw;
+    height: 19.2vw;
+    font-family: "Big Shoulders Display", sans-serif;
+    font-size: 5.33vw;
+    background-color: #151515;
+    color: white;
+    letter-spacing: 0.97vw;
+    font-weight: 700;
+    border: none !important;
+}
+
+.button button:hover {
+    cursor: pointer;
+}
+
+.button-hover-effect {
+    background-color: #D5966C !important;
+}
+
+.arrow-div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #D5966C;
+    width: 14.93vw;
+    height: 19.2vw;
+    border: none !important;
+}
+
+.arrow-div:hover {
+    cursor: pointer;
+}
+
+.arrow-img {
+    width: auto;
+    height: 6.4vw;
+}
+
+.arrow-hover-effect {
+    background-color: #151515;
+}
+
+/*MOBILE MAIN section*/
+.main-content-area {
+    display: flex;
+    flex-direction: column;
+    gap: 12.8vw;
+    width: 100%;
+    height: 131.47vw;
+    background-color: #151515;
+}
+
+.heading {
+    width: 91.47vw;
+    height: 12vw;
+    padding-left: 4.27vw;
+    padding-right: 4.27vw;
+    margin-top: 12.8vw;
+}
+
+.heading h1 {
+    font-family: "Big Shoulders Display", sans-serif;
+    font-size: 13.33vw;
+    line-height: 12vw;
+    color: white;
+    font-weight: 900;
+}
+
+.content {
+    width: 91.47vw;
+    height: 78.93vw;
+    margin-left: 4.27vw;
+    margin-right: 4.27vw;
+}
+
+.content h3 {
+    font-family: "Big Shoulders Display", sans-serif;
+    font-size: 8.53vw;
+    line-height: 8.53vw;
+    color:#D5966C;
+    font-weight: 900;
+}
+
+.content p {
+    font-family: "Outfit", sans-serif;
+    font-size: 4.8vw;
+    line-height: 7.67vw;
+    color: white;
+    font-weight: 180;
+    margin-top: 5.33vw;
+    
+}
+
+/*MOBILE FOOTER section*/
+.footer-grid {
+    display: grid;
+    grid-template-rows: 10.67vw 27.73vw 5.33vw;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+    "footer-headline"
+    "footer-p"
+    "footer-icons";
+    background-color: #D5966C;
+    /* top | right | bottom | left */
+    padding: 12.8vw 8.53vw 12.8vw 8.53vw;
+    color: #151515;
+    row-gap: 10.13vw;
+}
+
+.footer-headline {
+    grid-area: footer-headline;
+}
+
+.footer-p {
+    font-family: "Outfit", sans-serif;
+    grid-area: footer-p;
+    font-size: 4.27vw;
+    font-weight: 400;
+    line-height: 6.93vw;
+}
+
+.footer-icons {
+    grid-area: footer-icons;
+}
+
+.footer-icons img {
+    margin-right: 5.33vw;
+    filter: brightness(0) saturate(100%) invert(1%) sepia(17%) saturate(13%) hue-rotate(314deg) brightness(95%) contrast(85%);
+}
+
+.footer-icons img:hover {
+    filter: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(7500%) hue-rotate(139deg) brightness(118%) contrast(107%);
+}
+
+/*
+==================================
+TABLET styles
+==================================
+*/
+
+@media only screen and (min-width: 768px) {
+
+    /*TABLET MAP section*/
+    .map-section {
+        background-image: url('../assets/tablet/image-map@2x.png');
+        background-position: center;
+        background-size: cover;
+        width: 100%;
+        height: 78.13vw;
+    }
+
+    .button-link {
+        text-decoration: none;
+        width: 34.38vw;
+        height: 9.38vw;
+        margin-left: 5.08vw;
+    }
+
+    .button {
+        width: 100%;
+        height: 100%;
+        grid-column-start: 2;
+        grid-column-end: 3;
+    }
+
+    .button button {
+        width: 27.8vw;
+        height: 9.38vw;
+        font-size: 2.6vw;
+        letter-spacing: 0.47vw;
+    }
+
+    .arrow-div {
+        width: 7.29vw;
+        height: 9.38vw;
+    }
+    
+    .arrow-img {
+        height: 2.88vh;
+    }
+
+    /*TABLET MAIN section*/
+    .main-content-area {
+        flex-direction: row;
+        width: 100%;
+        height: 56.77vw;
+        background-color: #151515;
+    }
+    
+    .heading, .content, .heading h1, .content h3, .content p {
+        padding: 0px;
+        margin: 0px;
+    }
+
+    .heading {
+        width: 29.04vw;
+        height: 13.02vw;
+        padding-left: 5.08vw;
+        padding-right: 8.85vw;
+        padding-top: 11.46vw;
+        padding-bottom: 32.29vw;
+    }
+    
+    .content {
+        width: 51.82vw;
+        height: 34.9vw;
+        padding-top: 11.46vw;
+        padding-bottom: 10.42vw;
+    }
+    
+    .heading h1 {
+        font-size: 7.16vw;
+        line-height: 6.51vw;
+    }
+    
+    .content h3 {
+        font-size: 4.17vw;
+        line-height: 4.17vw;
+    }
+    
+    .content p {
+        font-size: 2.34vw;
+        line-height: 3.65vw;
+        margin-top: 2.6vw;
+    }
+
+    /*TABLET FOOTER section*/
+    .footer-grid {
+        grid-template-rows: 1fr;
+        grid-template-columns: 22.79vw 36.59vw 30.34vw;
+        grid-template-areas:
+        "footer-headline footer-p footer-icons";
+        /* top | right | bottom | left */
+        padding: 7.29vw 5.20vw 7.29vw 5.08vw;
+    }
+
+    .footer-headline img {
+        width: 14.33vw;
+        height: 5.21vw;
+    }
+
+    .footer-p {
+        height: 13.54vw;
+        font-size: 2.08vw;
+        line-height: 3.39vw;
+    }
+
+    .footer-icons {
+        display: flex;
+        justify-self: right;
+        width: 13.02vw;
+        height: 2.64vw;
+    }
+
+    .footer-icons img {
+        margin-right: 2.64vw;
+    }
+
+}
+
+/*
+==================================
+DESKTOP styles
+==================================
+*/
+
+@media only screen and (min-width: 1440px) {
+
+    /*DESKTOP MAP section*/
+    .map-section {
+        background-image: url('../assets/desktop/image-map@2x.png');
+        background-position: center;
+        background-size: cover;
+        width: 100%;
+        height: 41.67vw;
+    }
+
+    .button-link {
+        display: block;
+        margin-left: 10.83vw;
+        text-decoration: none;
+        width: 18.33vw;
+        height: 5vw;
+    }
+
+    .button {
+        width: 100%;
+        height: 100%;
+    }
+
+    .button button {
+        width: 14.44vw;
+        height: 5vw;
+        font-size: 1.39vw;
+        letter-spacing: 0.25vw;
+    }
+
+    .arrow-div {
+        width: 3.89vw;
+        height: 5vw;
+    }
+    
+    .arrow-img {
+        height: 2.88vh;
+    }
+
+    /*DESKTOP MAIN section*/
+    .main-content-area {
+        flex-direction: row;
+        width: 100%;
+        height: 38.1vw;
+        background-color: #151515;
+    }
+    
+    .heading, .content, .heading h1, .content h3, .content p {
+        padding: 0px;
+        margin: 0px;
+    }
+
+    .heading {
+        width: 24.3vw;
+        height: 9.72vw;
+        padding-left: 11.46vw;
+        margin-right: 15.28vw;
+        padding-top: 7.2vw;
+        padding-bottom: 21.1vw;
+    }
+    
+    .content {
+        width: 37.5vw;
+        height: 21.94vw;
+        padding-top: 7.2vw;
+        padding-bottom: 8.89vw;
+    }
+    
+    .heading h1 {
+        font-size: 4.86vw;
+        line-height: 4.86vw;
+    }
+    
+    .content h3 {
+        font-size: 2.5vw;
+        line-height: 2.5vw;
+        margin-bottom: -0.56vw;
+    }
+    
+    .content p {
+        font-size: 1.53vw;
+        line-height: 2.22vw;
+        margin-top: 2.22vw;
+    }
+
+    /*DESKTOP FOOTER section*/
+    .footer-grid {
+        grid-template-columns: 20.83vw 29.86vw 26.39vw;
+        /* top | right | bottom | left */
+        padding: 5.56vw 11.46vw 5.56vw 11.46vw;
+    }
+
+    .footer-headline img {
+        width: 11.08vw;
+        height: 4.03vw;
+    }
+
+    .footer-p {
+        width: 29.86vw;
+        height: 5.83vw;
+        font-size: 1.25vw;
+        line-height: 1.94vw;
+    }
+
+    .footer-icons {
+        width: 6.94vw;
+        height: 1.39vw;
+    }
+
+    .footer-icons img {
+        margin-right: 1.39vw;
+    }
+
+}

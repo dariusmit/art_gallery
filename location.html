@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@100..900&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@100..900&family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles/location-styles.css">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+  integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+  crossorigin=""/>
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+     integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+     crossorigin="">
+    </script>
+  <title>Art gallery website</title>
+</head>
+<body>
+
+<div class="map-section">
+  <a class="button-link" href="http://localhost/art_gallery/index.html">
+    <div class="button"> 
+      <div class="arrow-div">
+        <img class="arrow-img" src="assets/icon-arrow-left.svg"/>
+      </div>
+      <button class="btn">BACK TO HOME</button>
+    </div>
+  </a>
+  <div id="map">
+    <script type="text/javascript">
+      var map = L.map('map', { zoomControl: false }).setView([41.48, -71.31], 15);
+      L.marker([41.48, -71.31]).addTo(map).bindPopup('99 KING STREET<br>Newport<br>RI 02840<br>United States of America').openPopup();
+      L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {maxZoom: 19, attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'}).addTo(map);
+    </script>
+  </div>
+</div>
+
+<div class="main-content-area">
+  <div class="heading">
+    <h1>OUR LOCATION</h1>
+  </div>
+  <div class="content">
+    <h3>99 KING STREET</h3>
+    <p>
+      Newport</br>
+      RI 02840</br>
+      United States of America
+    </p>
+    <p>
+      Our newly opened gallery is located near the Edward King House on 99 King 
+      Street, the Modern Art Gallery is free to all visitors and open seven days 
+      a week from 8am to 9pm.
+    </p>
+  </div>
+</div>
+
+<footer class="footer-grid">
+  <div class="footer-headline">
+    <img src="assets/logo-dark.svg"/>
+  </div>
+  <div class="footer-p">
+    <p>
+      The Modern Art Gallery is free to all visitors and open seven days a week 
+      from 8 am to 9 pm. Find us at 99 King Street, Newport, USA.
+    </p>
+  </div>
+  <div class="footer-icons">
+    <img src="assets/icon-facebook.svg"/>
+    <img src="assets/icon-instagram.svg"/>
+    <img src="assets/icon-twitter.svg"/>
+  </div>
+</footer>
+
+<script type="text/javascript">
+  const btn = document.querySelector(".btn");
+  const arrow = document.querySelector('.arrow-div');
+  btn.addEventListener("mouseover", enableHover);
+  btn.addEventListener("mouseout", disableHover);
+  arrow.addEventListener("mouseover", enableHover);
+  arrow.addEventListener("mouseout", disableHover);
+
+  function enableHover() {
+    btn.classList.toggle("button-hover-effect");
+    arrow.classList.toggle("arrow-hover-effect");
+  }
+
+  function disableHover() {
+    btn.classList.remove("button-hover-effect");
+    arrow.classList.remove("arrow-hover-effect");
+  }
+</script>
+
+</body>
+</html>
